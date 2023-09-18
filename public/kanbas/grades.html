@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shubhang - Kanbas</title>
+
+    <style>
+        table td {
+            vertical-align: top;
+        }
+        .bordered-table {
+            border: 1px solid black;
+            /*border-collapse: collapse;*/
+        }
+
+        .bordered-table th, .bordered-table td {
+            border: 1px solid black;
+            /*text-align: center;*/
+        }
+        .bordered-table td {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<table>
+    <tr>
+        <td>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commmons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="./grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </td>
+
+        <td>
+            <select id="select-gradebook">
+                <option value="publishAll">Gradebook</option>
+                <option value="publishOne">Another book</option>
+            </select>
+            <button>Import</button>
+            <select id="select-export">
+                <option value="publishAll">Export</option>
+                <option value="publishOne">Import</option>
+            </select>
+
+            <h3>Student Names</h3>
+            <input id="text-student-name" placeholder="Search Students"/><br/>
+
+            <h3>Assignment Names</h3>
+            <form action="">
+                <input id="text-assignment-name" placeholder="Search Assignments"/><br/>
+            </form>
+            <br>
+            <button>Apply Filters</button>
+            <br>
+            <br>
+            <table class="bordered-table">
+                <tr>
+                    <th>Student Name</th>
+                    <th>A1 SETUP Out of 100</th>
+                    <th>A2 HTML Out of 100</th>
+                    <th>A3 CSS Out of 100</th>
+                    <th>A4 BOOTSTRAP Out of 100</th>
+                    <th>A5 JAVASCRIPT Out of 100</th>
+                    <th>A6 REACT Out of 100</th>
+                    <th>A7 REDUX Out of 100</th>
+                    <th>A8 NODE Out of 100</th>
+                    <th>A9 MONGO Out of 100</th>
+                </tr>
+                <tr>
+                    <td>Alice Wonderland</td>
+                    <td>98</td>
+                    <td>89</td>
+                    <td>87</td>
+                    <td>90</td>
+                    <td>89</td>
+                    <td>94</td>
+                    <td>88</td>
+                    <td>87</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Princes Leia</td>
+                    <td>98</td>
+                    <td>80</td>
+                    <td>87</td>
+                    <td>86</td>
+                    <td>100</td>
+                    <td>94</td>
+                    <td>85</td>
+                    <td>84</td>
+                    <td>92</td>
+                </tr>
+
+                <tr>
+                    <td>Luke Skywalker</td>
+                    <td>99</td>
+                    <td>88</td>
+                    <td>97</td>
+                    <td>82</td>
+                    <td>96</td>
+                    <td>93</td>
+                    <td>95</td>
+                    <td>100</td>
+                    <td>93</td>
+                </tr>
+
+                <tr>
+                    <td>Han Solo</td>
+                    <td>83</td>
+                    <td>99</td>
+                    <td>94</td>
+                    <td>98</td> <!-- Empty cell for missing data -->
+                    <td>86</td>
+                    <td>85</td> <!-- Empty cell for missing data -->
+                    <td>86</td>
+                    <td>80</td>
+                    <td>84</td>
+                </tr>
+                <tr>
+                    <td>Lando Calresian</td>
+                    <td>83</td>
+                    <td>92</td>
+                    <td>80</td>
+                    <td>80</td> <!-- Empty cell for missing data -->
+                    <td>92</td>
+                    <td>92</td> <!-- Empty cell for missing data -->
+                    <td>94</td>
+                    <td>87</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>Boba Fet</td>
+                    <td>85</td>
+                    <td>89</td>
+                    <td>94</td>
+                    <td>83</td> <!-- Empty cell for missing data -->
+                    <td>83</td>
+                    <td>84</td> <!-- Empty cell for missing data -->
+                    <td>91</td>
+                    <td>87</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>Darth Vader</td>
+                    <td>81</td>
+                    <td>81</td>
+                    <td>96</td>
+                    <td>80</td> <!-- Empty cell for missing data -->
+                    <td>89</td>
+                    <td>88</td> <!-- Empty cell for missing data -->
+                    <td>82</td>
+                    <td>80</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>Obi-Wan Kenobi</td>
+                    <td>85</td>
+                    <td>99</td>
+                    <td>87</td>
+                    <td>82</td> <!-- Empty cell for missing data -->
+                    <td>88</td>
+                    <td>83</td> <!-- Empty cell for missing data -->
+                    <td>88</td>
+                    <td>92</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>R2-D2</td>
+                    <td>81</td>
+                    <td>92</td>
+                    <td>82</td>
+                    <td>86</td> <!-- Empty cell for missing data -->
+                    <td>83</td>
+                    <td>84</td> <!-- Empty cell for missing data -->
+                    <td>98</td>
+                    <td>85</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>C-3PO</td>
+                    <td>94</td>
+                    <td>98</td>
+                    <td>83</td>
+                    <td>83</td> <!-- Empty cell for missing data -->
+                    <td>100</td>
+                    <td>96</td> <!-- Empty cell for missing data -->
+                    <td>96</td>
+                    <td>85</td>
+                    <td>87</td>
+                </tr>
+                <tr>
+                    <td>Yoda</td>
+                    <td>80</td>
+                    <td>89</td>
+                    <td>99</td>
+                    <td>89</td> <!-- Empty cell for missing data -->
+                    <td>96</td>
+                    <td>85</td> <!-- Empty cell for missing data -->
+                    <td>96</td>
+                    <td>92</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Admiral Ackbar</td>
+                    <td>82</td>
+                    <td>88</td>
+                    <td>95</td>
+                    <td>100</td> <!-- Empty cell for missing data -->
+                    <td>93</td>
+                    <td>98</td> <!-- Empty cell for missing data -->
+                    <td>85</td>
+                    <td>87</td>
+                    <td>99</td>
+                </tr>
+
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>
