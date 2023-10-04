@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
     <title>Shubhang - Kanbas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Shubhang - Kanbas</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../kanbas-navigation.css">
+    <link rel="stylesheet" href="../course-navigation.css">
+
 </head>
 <body>
 <style>
@@ -12,54 +24,26 @@
 <table>
     <tr>
         <td>
-            <ul>
-                <li><a href="../profile-navigation.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course-navigation.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commmons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="../home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="../assignments/index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="../grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </td>
-
-        <td>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid black; padding: 10px 0;">
-                <a href="course_details.html">Course Details</a> &nbsp;| &nbsp;
-                <a href="#">Sections</a> &nbsp;|&nbsp;
-                <a href="navigation.html">Navigation</a> &nbsp;|&nbsp;
-                <a href="#">Apps</a> &nbsp;|&nbsp;
-                <a href="#">Feature Options</a> &nbsp;|&nbsp;
-                <a href="#">Integrations</a>
+            <div class="kanbas-nav">
+                <ul>
+                    <li><a href="../profile/index.html"><i class="fas fa-user"></i> Account</a></li>
+                    <li><a href="../dashboard/index.html"><i class="fas fa-tachometer-alt" style="color: red"></i>
+                        Dashboard</a></li>
+                    <li><a href="../course-navigation.html" class="active"><i class="fas fa-book"
+                                                                              style="color: red"></i>
+                        Courses</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt" style="color: red"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-inbox" style="color: red"></i> Inbox</a></li>
+                    <li><a href="#"><i class="fas fa-history" style="color: red"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-palette" style="color: red"></i> Studio</a></li>
+                    <li><a href="#"><i class="fas fa-images" style="color: red"></i> Commons</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle" style="color: red"></i> Help</a></li>
+                </ul>
             </div>
-
-            <div style="border: 1px solid black; padding: 10px; margin-bottom: 20px;">
-                <h4>Drag and drop items to reorder them in the course navigation.</h4>
-                <ul style="list-style-type: none;">
+        </td>
+        <td>
+            <div class="course-nav">
+                <ul>
                     <li><a href="../home.html">Home</a></li>
                     <li><a href="#">Modules</a></li>
                     <li><a href="#">Piazza</a></li>
@@ -69,33 +53,253 @@
                     <li><a href="../grades.html">Grades</a></li>
                     <li><a href="#">People</a></li>
                     <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a class="active" href="#">Settings</a></li>
+                </ul>
+            </div>
+        </td>
+
+        <td>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Course Title</li>
+                    <!--                    <li class="breadcrumb-item">Term</li>-->
+                    <!--                    <li class="breadcrumb-item">Section</li>-->
+                    <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                    <li class="breadcrumb-item active" aria-current="page">Course Navigation</li>
+                </ol>
+            </nav>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid black; padding: 10px 0;">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="course_details.html" style="color: red;">Course Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: red;">Sections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="navigation.html" style="color: gray;">Navigation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: red;">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: red;">Feature Options</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: red;">Integrations</a>
+                    </li>
                 </ul>
             </div>
 
-            <div style="border: 1px solid black; padding: 10px;">
+            <div class="border p-3 mb-4">
+                <h4>Drag and drop items to reorder them in the course navigation.</h4>
+                <div class="list-group list-group-bordered">
+                    <a href="../home.html" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Home</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Modules</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Piazza</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Zoom Meetings</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../assignments/index.html" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Assignments</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Quizzes</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../grades.html" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Grades</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">People</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Panopto Video</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="border p-3">
                 <h4>Drag items here to hide them from students.</h4>
                 <p>Disabling most pages will cause students who visit those pages to be redirected to the course home page.</p>
-                <ul style="list-style-type: none;">
-                    <li><a href="#">Chat</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">SCORM</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Attendance</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Barnes and Noble Bookstore</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Digication</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Top Hat</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Syllabus</a> - Page disabled, will redirect to course home page</li>
-                    <li><a href="#">Perusall</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Microsoft Teams Meetings</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">FACT Reporting and Photo Roster</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Progress Reports (Navigate)</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Microsoft Teams for Canvas</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">VHL Central</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Gradescope 1.3</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">Credentials</a> - Page disabled, won't appear in navigation</li>
-                    <li><a href="#">iClicker</a> - Page disabled, won't appear in navigation</li>
-                </ul>
+                <div class="list-group list-group-bordered">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Chat</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">SCORM</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Attendance</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Barnes and Noble Bookstore</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Digication</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Top Hat</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Syllabus</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, will redirect to course home page</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Perusall</h5>
+                            <div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <small>Page disabled, won't appear in navigation</small>
+                    </a>
+                </div>
             </div>
+
+
+
+<!--            <div style="border: 1px solid black; padding: 10px; margin-bottom: 20px;">-->
+<!--                <h4>Drag and drop items to reorder them in the course navigation.</h4>-->
+<!--                <ul style="list-style-type: none;">-->
+<!--                    <li><a href="../home.html">Home</a></li>-->
+<!--                    <li><a href="#">Modules</a></li>-->
+<!--                    <li><a href="#">Piazza</a></li>-->
+<!--                    <li><a href="#">Zoom Meetings</a></li>-->
+<!--                    <li><a href="../assignments/index.html">Assignments</a></li>-->
+<!--                    <li><a href="#">Quizzes</a></li>-->
+<!--                    <li><a href="../grades.html">Grades</a></li>-->
+<!--                    <li><a href="#">People</a></li>-->
+<!--                    <li><a href="#">Panopto Video</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div style="border: 1px solid black; padding: 10px;">-->
+<!--                <h4>Drag items here to hide them from students.</h4>-->
+<!--                <p>Disabling most pages will cause students who visit those pages to be redirected to the course home page.</p>-->
+<!--                <ul style="list-style-type: none;">-->
+<!--                    <li><a href="#">Chat</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">SCORM</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Attendance</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Barnes and Noble Bookstore</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Digication</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Top Hat</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Syllabus</a> - Page disabled, will redirect to course home page</li>-->
+<!--                    <li><a href="#">Perusall</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Microsoft Teams Meetings</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">FACT Reporting and Photo Roster</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Progress Reports (Navigate)</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Microsoft Teams for Canvas</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">VHL Central</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Gradescope 1.3</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">Credentials</a> - Page disabled, won't appear in navigation</li>-->
+<!--                    <li><a href="#">iClicker</a> - Page disabled, won't appear in navigation</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <br>-->
             <br>
-            <button>Save</button>
+
+            <button class="btn btn-danger">Save</button>
 
 
 

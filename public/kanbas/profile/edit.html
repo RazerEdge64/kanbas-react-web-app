@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <title>Shubhang - Kanbas</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../kanbas-navigation.css">
+    <link rel="stylesheet" href="../course-navigation.css">
+    <link rel="stylesheet" href="profile-styles.css">
 </head>
 <body>
 <style>
@@ -12,80 +19,120 @@
 <table>
     <tr>
         <td>
-            <ul>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course-navigation.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commmons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+            <div class="kanbas-nav">
+                <ul>
+                    <li><a href="#" class="active" ><i class="fas fa-user"></i> Account</a></li>
+                    <li><a href="../dashboard/index.html"><i class="fas fa-tachometer-alt" style="color: red"></i> Dashboard</a></li>
+                    <li><a href="../course-navigation.html"><i class="fas fa-book" style="color: red"></i> Courses</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt" style="color: red"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-inbox" style="color: red"></i> Inbox</a></li>
+                    <li><a href="#"><i class="fas fa-history" style="color: red"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-palette" style="color: red"></i> Studio</a></li>
+                    <li><a href="#"><i class="fas fa-images" style="color: red"></i> Commons</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle" style="color: red"></i> Help</a></li>
+                </ul>
+            </div>
+
         </td>
         <td>
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="./index.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tool</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
+            <div class="course-nav">
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="./index.html" class="active">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tool</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
+            </div>
+
         </td>
 
         <td>
-            <h1>Jose Annunziato</h1>
-            <label>Name:* </label> <input type="text" value="Jose Annunziato">
-            <label>Pronouns: </label>
-            <select name="pronouns" id="pronouns">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: start;">
+                    <div class="icon-circle">
+                        <i class="fas fa-user fa-5x"></i>
+                    </div>
+                    <h1>Jose Annunziato</h1>
+                </div>
+                <a href="./index.html" class="btn btn-light">
+                    <i class="fas fa-pencil-alt"></i> Cancel Editing
+                </a>
+            </div>
+
+            <label> <b> Name:* </b></label>
+
+            <input class="form-control" type="text" value="Jose Annunziato">
+
+
+            <label > <b> Pronouns: </b></label>
+            <select class="form-select" name="pronouns" id="pronouns">
                 <option value="None">None</option>
                 <option value="He">He</option>
                 <option value="Her">Her</option>
             </select>
 
+            <label> <b> Title </b></label>
+
+            <input class="form-control" type="text">
+            <br>
+
+
             <h3>Contact</h3>
-            <p>No registered services, you can add some on the <a href="../courses/settings.html"> settings</a> page.</p>
-            <h3>Contact</h3>
-            <p>No registered services, you can add some on the <a href="../courses/settings.html"> settings</a> page.</p>
+            <p>No registered services, you can add some on the <a href="../courses/settings.html" style="color: red">settings</a> page.</p>
+            <br>
 
             <h3>Biography</h3>
-            <label>Faculty, Software Engineer, AI, Space, and renewables enthusiast. </label> <br>
-            <textarea name="biography" id="biography" style="width: 100%">Faculty, Software Engineer, AI, Space, and renewables enthusiast.
-            </textarea>
+            <div class="input-group">
+                <textarea class="form-control" name="biography" id="biography" style="width: 100%">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+            </div>
+            <br>
 
             <h3>Links</h3>
-            <ul style="list-style-type: none;">
-                <li><a href="#" target="_blank">YouTube </a> <a href="#" style="color: blue;">Links to an external site.</a></li>
-            </ul>
-
-            <table style="width: 100%;">
-                <tr>
-                    <th>Title</th>
-                    <th>URL</th>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="YouTube" style="width: 150px;"></td>
-                    <td>→<input type="text" placeholder="https://www.youtube.com" style="width: 250px;"></td>
-                    <td><a href="#" style="color: blue;">Remove</a></td>
-                </tr>
-            </table>
+            <div class="row mb-2">
+                <div class="col-4 text-center" >
+                    <b>Title</b>
+                </div>
+                <div class="col-7 text-center">
+                    <b>URL</b>
+                </div>
+            </div>
+            <div class="row mb-2 align-items-center">
+                <div class="col-4">
+                    <input type="text" class="form-control" placeholder="YouTube">
+                </div>
+                <div class="col-1 text-center">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="https://www.youtube.com">
+                </div>
+                <div class="col-1">
+                    <a href="#" style="color: red;"><i class="fas fa-remove"></i></a>
+                </div>
+            </div>
 
             <br>
-            <button>Add another link</button>
-            <button>Cancel</button>
-            <a href="./index.html"><button>Save Profile</button></a>
-            <br><br>
-            <a href="#"><button>Edit Profile</button></a>
-            <a href="./index.html"><button>Cancel Editing</button></a>
+            <button class="btn btn-light">Add another link</button>
 
 
 
+            <br>
+            <hr>
+            <div class="float-end">
+                <a href="./index.html" class="btn btn-light">
+                    Cancel
+                </a>
+                <a href="./index.html" class="btn btn-danger">
+                    <i class="fas fa-pencil-alt"></i> Save Profile
+                </a>
+            </div>
         </td>
+
     </tr>
 </table>
 </body>

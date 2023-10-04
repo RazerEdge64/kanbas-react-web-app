@@ -1,0 +1,46 @@
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.list-group-item .link {
+    color: red;
+    text-decoration: none;
+}
+
+.course-nav ul li a.active {
+    color: black;
+    /*border-left: 3px solid black;*/
+    /*padding-left: 10px;*/
+}
+
+.checkmark {
+    color: green;
+}
+
+/* Bootstrap classes for breadcrumb */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+
+.indented {
+    padding-left: 30px;
+}
+
+.float-end {
+    float: right;
+}
+
+td.expand {
+    width: 100%;
+}

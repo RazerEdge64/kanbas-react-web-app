@@ -1,0 +1,12 @@
+td.expand {
+    width: 100%;
+    min-width: 900px;
+}
+
+.list-group-bordered {
+    border-left: 5px solid green;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}

@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <title>Shubhang - Kanbas</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../kanbas-navigation.css">
+    <link rel="stylesheet" href="../course-navigation.css">
+    <link rel="stylesheet" href="profile-styles.css">
 </head>
 <body>
 <style>
@@ -12,52 +19,70 @@
 <table>
     <tr>
         <td>
-            <ul>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course-navigation.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commmons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+            <div class="kanbas-nav">
+                <ul>
+                    <li><a href="#" class="active" ><i class="fas fa-user"></i> Account</a></li>
+                    <li><a href="../dashboard/index.html"><i class="fas fa-tachometer-alt" style="color: red"></i> Dashboard</a></li>
+                    <li><a href="../course-navigation.html"><i class="fas fa-book" style="color: red"></i> Courses</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt" style="color: red"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-inbox" style="color: red"></i> Inbox</a></li>
+                    <li><a href="#"><i class="fas fa-history" style="color: red"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-palette" style="color: red"></i> Studio</a></li>
+                    <li><a href="#"><i class="fas fa-images" style="color: red"></i> Commons</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle" style="color: red"></i> Help</a></li>
+                </ul>
+            </div>
         </td>
         <td>
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tool</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-
-        <td>
-            <p>Jose Annunziato's Profile</p>
-            <hr>
-
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h1>Jose Annunziato</h1>
-                <a href="./edit.html"><button>Edit Profile</button></a>
+            <div class="course-nav">
+                <ul>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#" class="active">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tool</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
             </div>
 
+        </td>
+
+        <td>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: start;">
+                    <div class="icon-circle">
+                        <i class="fas fa-user fa-5x"></i>
+                    </div>
+
+                    <h1>Jose Annunziato</h1>
+                </div>
+                <a href="./edit.html" class="btn btn-light">
+                    <i class="fas fa-pencil-alt"></i> Edit Profile
+                </a>
+            </div>
+            <br>
+
+<!--            <div style="display: flex; justify-content: space-between; align-items: center;">-->
+
+<!--            </div>-->
 
 
             <h3>Contact</h3>
-            <p>No registered services, you can add some on the <a href="../courses/settings.html">settings</a> page. </p>
+            <p>No registered services, you can add some on the <a href="../courses/settings.html" style="color: red">settings</a> page.</p>
+
 
             <h3>Biography</h3>
             <p>Faculty, Software Engineer, AI, Space and renewables enthusiast.</p>
 
+
             <h3>Links</h3>
-            <a href="www.youtube.com">YouTube</a>
+            <i class="fas fa-link"></i> <a href="https://www.youtube.com" style="color: red" target="_blank">YouTube <i class="fas fa-external-link-alt"></i></a>
+
         </td>
+
     </tr>
 </table>
 </body>
