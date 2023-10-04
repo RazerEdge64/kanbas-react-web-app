@@ -1,0 +1,109 @@
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.list-group-item .link {
+    color: red;
+    text-decoration: none;
+}
+
+.course-navigation ul li a.active {
+    color: black;
+    /*border-left: 3px solid black;*/
+    /*padding-left: 10px;*/
+}
+
+.checkmark {
+    color: green;
+}
+
+/* Bootstrap classes for breadcrumb */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+
+.indented {
+    padding-left: 30px;
+}
+
+.float-end {
+    float: right;
+}
+
+td.expand {
+    width: 100%;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.course-navigation {
+    position: fixed;
+    top: 0;
+    left: 85px;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+
+    /*Sidebar*/
+    /*display: none;*/
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ccc;
+
+}
+
+.course-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-navigation li {
+    padding: 1px 0;
+    text-align: left;
+}
+
+.course-navigation a {
+    text-decoration: none;
+    color: red;
+    display: block;
+    padding: 7px 20px 7px 10px;
+}
+
+.course-navigation a:hover {
+    background-color: white;
+    color: black;
+}
+
+.course-navigation a.active {
+    background-color: white;
+    color: black;
+    position: relative;
+}
+
+.course-navigation a.active::before {
+    content: '';
+    position: absolute;
+    /*left: 0;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    width: 3px;
+    background-color: black;
+}

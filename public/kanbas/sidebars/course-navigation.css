@@ -2,14 +2,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.course-nav {
+    position: fixed;
+    top: 0;
+    left: 85px;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+
+    /*Sidebar*/
+    display: none;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ccc;
 
 }
-.course-nav {
-    padding-left: 20px;
-    width: 190px;
-    font-size: 0.8em;
-    margin-left: 80px;
+
+.course-nav .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
+
 .course-nav ul {
     list-style-type: none;
     padding: 0;
@@ -26,7 +44,6 @@ body {
     color: red;
     display: block;
     padding: 7px 20px 7px 10px;
-
 }
 
 .course-nav a:hover {
@@ -49,4 +66,3 @@ body {
     width: 3px;
     background-color: black;
 }
-
