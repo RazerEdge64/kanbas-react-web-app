@@ -23,41 +23,41 @@ function Grades() {
         </h5>
         <div>
           <div className="grade-buttons">
-            <button class="btn btn-secondary">
+            <button className="btn btn-secondary">
               <TbFileImport /> Import
             </button>
-            <button class="btn btn-secondary">
+            <button className="btn btn-secondary">
               <LiaFileImportSolid /> Export <AiFillCaretDown />
             </button>
-            <button class="btn btn-secondary">
+            <button className="btn btn-secondary">
               <BsGearFill />
             </button>
           </div>
         </div>
       </div>
-      <div class="row" style={{ marginBottom: 16 }}>
-        <div class="col">
+      <div className="row" style={{ marginBottom: 16 }}>
+        <div className="col">
           <label for="searchStudents">
             <b>Student Names</b>
           </label>
-          <select id="searchStudents" class="form-select">
+          <select id="searchStudents" className="form-select">
             <option value="VAL1" selected>
               <span>
-                <i class="fa-solid fa-magnifying-glass"></i>Search Students
+                <i className="fa-solid fa-magnifying-glass"></i>Search Students
               </span>
             </option>
             <option value="VAL2">Rollno 1</option>
             <option value="VAL2">Rollno 2</option>
           </select>
         </div>
-        <div class="col">
+        <div className="col">
           <label for="assignmentNames">
             <b>Assignment Names</b>
           </label>
-          <select id="assignmentNames" class="form-select">
+          <select id="assignmentNames" className="form-select">
             <option value="VAL1" selected>
               <span>
-                <i class="fa-solid fa-magnifying-glass"></i>Search Assignments
+                <i className="fa-solid fa-magnifying-glass"></i>Search Assignments
               </span>
             </option>
             <option value="VAL2">Assignment 1</option>
@@ -65,7 +65,7 @@ function Grades() {
           </select>
         </div>
       </div>
-      <button class="btn btn-secondary margin-t margin-b">
+      <button className="btn btn-secondary margin-t margin-b">
         <BsFunnel /> Apply Filters
       </button>
       <div className="table-responsive" style={{ marginTop: 16 }}>
