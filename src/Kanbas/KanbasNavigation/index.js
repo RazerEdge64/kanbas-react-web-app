@@ -10,7 +10,7 @@ function KanbasNavigation() {
   const links = [
     { label: "Account", icon: <BiUserCircle className="wd-icon" />, default: "" },
     { label: "Dashboard", icon: <RiDashboard3Fill className="wd-icon" />, default: "" },
-    { label: "Courses", icon: <FaBook className="wd-icon" />, default: "CS5500" },
+    { label: "Courses", icon: <FaBook className="wd-icon" />, default: "" },
     { label: "Calendar", icon: <BsFillCalendar2WeekFill className="wd-icon" />, default: "" },
     { label: 'Inbox', icon: <FaInbox className="wd-icon"/>, default: "#" },
     { label: 'History', icon: <FaHistory className="wd-icon"/>, default: "#" },
