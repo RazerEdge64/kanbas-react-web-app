@@ -1,14 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import ModulesReducer from "../Courses/Modules/ModulesReducer";
-import assignmentReducer from "../Courses/Assignments/assignmentReducer";
+/** @format */
 
+import { configureStore } from "@reduxjs/toolkit"
+import modulesReducer from "../Courses/Modules/ModulesReducer"
 
 const store = configureStore({
-  reducer: {
-    ModulesReducer,
-    assignmentReducer
-  }
-});
+	reducer: {
+		modulesReducer,
+	},
+})
 
-
-export default store;
+export default store

@@ -1,483 +1,935 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Shubhang - Kanbas</title>
-    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="../kanbas-navigation.css">
-    <link rel="stylesheet" href="../course-navigation.css">
-    <link rel="stylesheet" href="dashboard.css">
-</head>
-<body>
-<style>
-    table td {
-        vertical-align: top;
-    }
-</style>
-<table>
-    <tr>
-        <td>
-            <div class="kanbas-nav">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="../../images/neu-logo.png" width="56px" height="56px" />
-                        </a>
-                    </li>
-                    <li><a href="../profile/index.html"><i class="fa fa-2x fa-user-circle"></i> Account</a></li>
-                    <li><a href="#" class="active"><i class="fa fa-2x fa-tachometer-alt" style="color: red"></i> Dashboard</a></li>
-                    <li><a href="../course-navigation.html"><i class="fa fa-2x fa-book" style="color: red"></i> Courses</a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-calendar-alt" style="color: red"></i> Calendar</a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-inbox" style="color: red"></i> Inbox</a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-history" style="color: red"></i> History</a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-palette" style="color: red"></i> Studio</a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-images" style="color: red"></i> Commons</a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-question-circle" style="color: red"></i> Help</a></li>
-                </ul>
-            </div>
-        </td>
-<!--        <td>-->
-<!--            <h2>Dashboard</h2>-->
-<!--            <hr/>-->
-<!--            <div style="margin-left: 30px;">-->
-<!--                <h4>Published Courses (9)</h4>-->
-<!--                <hr>-->
-<!--                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-between">-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kanbas</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+			integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+			crossorigin="anonymous"
+		></script>
+		<link href="index.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="navbar-content">
+				<div class="logo-container navbar-item-container">
+					<a class="navbar-link" href="../index.html">
+						<image
+							src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png"
+							alt="Logo"
+						/>
+					</a>
+				</div>
+				<!-- Add class navbar-item-active to the item that is active  -->
+				<div class="nav-account navbar-item-container">
+					<a href="../account/">
+						<i class="fa-regular fa-circle-user nav-item-icon white"></i>
+						<p class="nav-item-text">Account</p>
+					</a>
+				</div>
+				<div class="nav-dashboard navbar-item-container navbar-item-active">
+					<a href="../../dashboard/">
+						<i class="fa-solid fa-gauge nav-item-icon"></i>
+						<p class="nav-item-text">Dashboard</p>
+					</a>
+				</div>
+				<div class="nav-courses navbar-item-container">
+					<a href="../courses/">
+						<i class="fa-solid fa-book nav-item-icon"></i>
+						<p class="nav-item-text">Courses</p>
+					</a>
+				</div>
+				<div class="nav-calendar navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-calendar-days nav-item-icon"></i>
 
-<!--                    &lt;!&ndash; Card 1 &ndash;&gt;-->
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+						<p class="nav-item-text">Calendar</p>
+					</a>
+				</div>
+				<div class="nav-inbox navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-inbox nav-item-icon"></i>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+						<p class="nav-item-text">Inbox</p>
+					</a>
+				</div>
+				<div class="nav-history navbar-item-container">
+					<a href="#">
+						<i class="fa-regular fa-clock nav-item-icon"></i>
 
-<!--                        </div>-->
-<!--                    </div>-->
+						<p class="nav-item-text">History</p>
+					</a>
+				</div>
+				<div class="nav-studio navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-tv nav-item-icon"></i>
 
-<!--                    &lt;!&ndash; Card 2 &ndash;&gt;-->
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+						<p class="nav-item-text">Studio</p>
+					</a>
+				</div>
+				<div class="nav-commons navbar-item-container">
+					<a href="#">
+						<i class="fa-solid fa-arrow-right-from-bracket nav-item-icon"></i>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+						<p class="nav-item-text">Commons</p>
+					</a>
+				</div>
+				<div class="nav-help navbar-item-container">
+					<a href="#">
+						<i class="fa-regular fa-circle-question nav-item-icon"></i>
 
-<!--                        </div>-->
-<!--                    </div>-->
+						<p class="nav-item-text">Help</p>
+					</a>
+				</div>
+			</div>
+			<div class="scrollable">
+				<div class="main-page">
+					<div class="container-fluid">
+						<div class="row account-header">
+							<h1 class="main-header-text">Dashboard</h1>
+						</div>
+						<div class="row">
+							<hr class="custom-divider" />
+						</div>
+						<div class="main-content container-fluid">
+							<div class="row">
+								<h3 class="sub-header-text">Published Courses (24)</h3>
+							</div>
+							<div class="row">
+								<hr />
+							</div>
+							<div class="row">
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    &lt;!&ndash; Card 3 &ndash;&gt;-->
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    &lt;!&ndash; Card 4 &ndash;&gt;-->
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                    <div class="col">-->
-<!--                        <div class="card m-3 position-relative">-->
-<!--                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">-->
-<!--                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">-->
-<!--                                <i class="fas fa-ellipsis-v"></i>-->
-<!--                            </button>-->
-<!--                            <div class="card-body" style="padding-bottom: 50px;">-->
-<!--                                <a href="../home.html" style="text-decoration: none; display: block;">-->
-<!--                                    <h5 class="card-title">Course Title</h5>-->
-<!--                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>-->
-<!--                                </a>-->
-<!--                            </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>-->
-<!--                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>-->
-<!--                            </nav>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                        </div>-->
-<!--                    </div>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-<!--                </div>-->
-<!--            </div>-->
-<!--        </td>-->
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div
+									class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-3 mt-3"
+								>
+									<a href="../courses/">
+										<div class="card course-card">
+											<div class="card-image-container">
+												<div class="float-end">
+													<div class="course-card-action">
+														<i
+															class="fa-solid fa-ellipsis-vertical white course-edit-icon"
+														></i>
+													</div>
+												</div>
+											</div>
 
-        <td>
-            <div style="margin-left: 100px">
-                <h2>Dashboard</h2>
-                <hr/>
-                <div style="margin-left: 30px;">
-                    <h4>Published Courses (9)</h4>
-                    <hr>
-                    <div class="d-flex flex-row flex-wrap row-cols-4">
-
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-
-                        <div class="card m-3 position-relative" style="width: 260px;">
-                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">
-                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="card-body" style="padding-bottom: 50px;">
-                                <a href="../home.html" style="text-decoration: none; display: block;">
-                                    <h5 class="card-title">Course Title</h5>
-                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>
-                                </a>
-                            </div>
-
-                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>
-                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-<!--            <div style="margin-left: 100px">-->
-<!--                <h2>Dashboard</h2>-->
-<!--                <hr/>-->
-<!--                <div style="margin-left: 30px;">-->
-<!--                    <h4>Published Courses (9)</h4>-->
-<!--                    <hr>-->
-<!--                    <div class="container-fluid">-->
-<!--                        <div class="row">-->
-<!--                            &lt;!&ndash; Card 1 &ndash;&gt;-->
-<!--                            &lt;!&ndash;                        <div class="card m-3 position-relative" style="width: 260px;">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            <img src="../../blue.jpg" class="card-img-top" alt="Course Image">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            <button class="btn position-absolute top-0 end-0 mt-2 me-2" style="background: transparent; border: none;">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                <i class="fas fa-ellipsis-v"></i>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            </button>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            <div class="card-body" style="padding-bottom: 50px;">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                <a href="../home.html" style="text-decoration: none; display: block;">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                    <h5 class="card-title">Course Title</h5>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                    <p class="card-text" style="font-size: 14px;">Term, Year, Section</p>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                </a>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            </div>&ndash;&gt;-->
-
-<!--                            &lt;!&ndash;                            <nav class="position-absolute bottom-0 start-0 mb-2 ms-2" style="display: flex; gap: 10px;">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-bullhorn"></i></button>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-tasks"></i></button>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                <button class="btn" style="background: transparent; border: none;"><i class="fas fa-comments"></i></button>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            </nav>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--                            &lt;!&ndash; Card 2 &ndash;&gt;-->
-<!--                            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
-<!--                                <div class="card m-3 position-relative" style="width: 260px;">-->
-<!--                                    &lt;!&ndash; Card content here &ndash;&gt;-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; ... Repeat for other cards ... &ndash;&gt;-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-
-
-        </td>
-
-
-
-
-    </tr>
-</table>
-</body>
+											<div class="card-body">
+												<h6 class="card-title blue pointer">
+													CS4550 126 Web Development
+													<span class="red">...</span>
+												</h6>
+												<p class="card-subtitle mb-2 text-body-secondary grey">
+													CS4550.12631.202410
+												</p>
+												<p class="card-text grey">
+													202410_1 Fall 2023 Semester
+												</p>
+												<i
+													class="fa-solid fa-file-pen course-edit-icon grey"
+												></i>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

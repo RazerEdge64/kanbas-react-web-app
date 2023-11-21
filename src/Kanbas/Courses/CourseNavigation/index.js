@@ -1,44 +1,39 @@
-import { Link, useParams, useLocation } from "react-router-dom";
-import "./index.css";
+import React from "react"
+import { useLocation, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
-function CourseNavigation() {
-  const links = [
-    "Home",
-    "Modules",
-    "Piazza",
-    "Zoom-Meetings",
-    "Assignments",
-    "Quizzes",
-    "Grades",
-    "People",
-    "Panopto-Video",
-    "Discussions",
-    "Announcements",
-    "Pages",
-    "Files",
-    "Rubrics",
-    "Outcomes",
-    "Collaborations",
-    "Syllabus",
-    "Settings"
-  ];
+export default function CourseNavigation({ number }) {
+	const links = [
+		"Home",
+		"Modules",
+		"Piazza",
+		"Zoom Meetings",
+		"Assignments",
+		"Quizzes",
+		"Grades",
+		"People",
+		"Panopto Video",
+		"Settings",
+	]
+	const { courseId } = useParams()
+	const { pathname } = useLocation()
 
-  const { courseId } = useParams();
-  const { pathname } = useLocation();
-
-  return (
-      <div className="wd-course-navigation" style={{ width: 150, borderRadius: 0 }}>
-        {links.map((link, index) => (
-            <Link
-                key={index}
-                to={`/Kanbas/Courses/${courseId}/${link}`}
-                className={`list-group-item ${pathname.includes(link) && "active"}`}
-            >
-              {link}
-            </Link>
-        ))}
-      </div>
-  );
+	return (
+		<div className='second-navigation'>
+			<div className='navigation-head-text'>
+				<i>{number} Fall 2023 Semest...</i>
+			</div>
+			{links.map((link, index) => (
+				<div
+					key={index}
+					className={`nav-element ${
+						pathname?.includes(link) && "secondary-nav-active"
+					}`}>
+					<Link to={`/Kanbas/Courses/${courseId}/${link}`}>
+						<p className='nav-element-title'>{link}</p>
+					</Link>
+				</div>
+			))}
+		</div>
+	)
 }
-
-export default CourseNavigation;

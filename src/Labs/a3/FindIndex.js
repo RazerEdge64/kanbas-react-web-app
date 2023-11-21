@@ -1,17 +1,19 @@
-function FindIndex() {
-    let numberArray1 = [1, 2, 4, 5, 6];
-    let stringArray1 = ['string1', 'string3'];
+/** @format */
 
-    const fourIndex = numberArray1.findIndex(a => a === 4);
-    const string3Index = stringArray1.findIndex(a => a === 'string3');
+import React from "react"
 
-    return(
-        <>
-            <h3>FindIndex function</h3>
-            fourIndex = {fourIndex} <br/>
-            string3Index = {string3Index} <br/>
-        </>
-    )
+const FindIndex = () => {
+	let numberArray1 = [1, 2, 4, 5, 6]
+	let stringArray1 = ["string1", "string3"]
+	const fourIndex = numberArray1.findIndex((a) => a === 4)
+	const string3Index = stringArray1.findIndex((a) => a === "string3")
+	return (
+		<div>
+			<h1>Find Index</h1>
+			fourIndex = {fourIndex} <br />
+			string3Index = {string3Index} <br />
+		</div>
+	)
 }
 
-export default FindIndex;
+export default FindIndex

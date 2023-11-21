@@ -1,12 +1,12 @@
+/** @format */
+
 function ChildStateComponent({ counter, setCounter }) {
-    return (
-      <div>
-        <h3>Counter {counter}</h3>
-        <button className="btn btn-success mx-1" onClick={() => setCounter(counter + 1)}>
-          Increment</button>
-        <button className="btn btn-danger mx-1" onClick={() => setCounter(counter - 1)}>
-          Decrement</button>
-      </div>
-    );
-  }
-  export default ChildStateComponent;
+	return (
+		<div>
+			<h3>Counter {counter}</h3>
+			<button onClick={() => setCounter(counter + 1)}>Increment</button>
+			<button onClick={() => setCounter(counter - 1)}>Decrement</button>
+		</div>
+	)
+}
+export default ChildStateComponent

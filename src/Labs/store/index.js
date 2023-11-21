@@ -1,14 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
-import helloReducer from "../a4/ReduxExamples/HelloRedux/helloReducer";
-import counterReducer from "../a4/ReduxExamples/CounterRedux/counterReducer";
-import addReducer from "../a4/ReduxExamples/AddRedux/addReducer";
-import todosReducer from "../a4/ReduxExamples/todos/todosReducer";
+/** @format */
+
+import { configureStore } from "@reduxjs/toolkit"
+import helloReducer from "../a4/ReduxExamples/HelloRedux/HelloReducer"
+import counterReducer from "../a4/ReduxExamples/CounterRedux/CounterReducer"
+import addReducer from "../a4/ReduxExamples/AddRedux/AddReducer"
+import todosReducer from "../a4/ReduxExamples/todos/todosReducer"
+
 const store = configureStore({
-  reducer: {
-    helloReducer,
-    counterReducer,
-    addReducer,
-    todosReducer,
-  },
-});
-export default store;
+	reducer: {
+		helloReducer,
+		counterReducer,
+		addReducer,
+		todosReducer,
+	},
+})
+export default store
