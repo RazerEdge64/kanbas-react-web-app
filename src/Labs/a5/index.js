@@ -1,6 +1,6 @@
-import EncodingParametersInURLs from "./EncodingParametersInURLs.js";
-import WorkingWithArrays from "./WorkingWithArrays.js";
-import WorkingWithObjects from "./WorkingWithObjects.js";
+import EncodingParametersInURLs from "./EncodingParametersInURLs";
+import WorkingWithArrays from "./WorkingWithArrays";
+import WorkingWithObjects from "./WorkingWithObjects";
 
 function Assignment5() {
     return (
@@ -15,7 +15,6 @@ function Assignment5() {
         <EncodingParametersInURLs />
         <WorkingWithObjects />
         <WorkingWithArrays />
-        {/* <SimpleAPIExamples /> */}
       </div>
     );
   }

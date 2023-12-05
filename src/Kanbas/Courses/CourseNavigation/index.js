@@ -1,39 +1,47 @@
-import React from "react"
-import { useLocation, useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link, useParams, useLocation } from "react-router-dom";
+import "./index.css";
 
-export default function CourseNavigation({ number }) {
-	const links = [
-		"Home",
-		"Modules",
-		"Piazza",
-		"Zoom Meetings",
-		"Assignments",
-		"Quizzes",
-		"Grades",
-		"People",
-		"Panopto Video",
-		"Settings",
-	]
-	const { courseId } = useParams()
-	const { pathname } = useLocation()
+function CourseNavigation() {
+  const links = [
+    "Home",
+    "Modules",
+    "Piazza",
+    "Zoom Meetings",
+    "Assignments",
+    "Quizzes",
+    "Grades",
+    "People",
+    "Panopto Video",
+    "Discussions",
+    "Announcements",
+    "Pages",
+    "Files",
+    "Rubrics",
+    "Outcomes",
+    "Collobarations",
+    "Syllabus",
+    "Settings",
+  ];
 
-	return (
-		<div className='second-navigation'>
-			<div className='navigation-head-text'>
-				<i>{number} Fall 2023 Semest...</i>
-			</div>
-			{links.map((link, index) => (
-				<div
-					key={index}
-					className={`nav-element ${
-						pathname?.includes(link) && "secondary-nav-active"
-					}`}>
-					<Link to={`/Kanbas/Courses/${courseId}/${link}`}>
-						<p className='nav-element-title'>{link}</p>
-					</Link>
-				</div>
-			))}
-		</div>
-	)
+  const { courseId } = useParams();
+  const { pathname } = useLocation();
+
+  return (
+    <div className="list-group kanbas-nav-list">
+      {links.map((link, index) => (
+        <Link
+          key={index}
+          to={`/Kanbas/Courses/${courseId}/${link.replace(" ", "")}`}
+          className={`list-group-item kanbas-nav-list-item ${
+            pathname.includes(link.replace(" ", "")) ? "kanbas-nav-active" : ""
+          }`}
+        >
+          {link}
+        </Link>
+      ))}
+    </div>
+  );
 }
+
+export default CourseNavigation;

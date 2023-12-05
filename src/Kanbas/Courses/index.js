@@ -1,112 +1,173 @@
-/** @format */
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import CourseNavigation from "./CourseNavigation";
+import "./index.css";
+import CourseHeader from "./CourseHeader";
+import Modules from "./Modules";
+import Home from "./Home";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/AssignmentEditor";
+import Grades from "./Grades";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-import React, { useEffect, useState } from "react"
 
-import db from "../Database"
-import { Navigate, Route, Routes, useLocation, useParams } from "react-router"
+function Courses() {
+  const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
 
-import "./index.css"
-import CourseNavigation from "./CourseNavigation"
-import Home from "./Home"
-import { Link } from "react-router-dom"
-import Modules from "./Modules"
-import Assignments from "./Assignments"
-import AssignmentEditor from "./Assignments/AssignmentEditor"
-import Grades from "./Grades"
+  const request = axios.create({
+    withCredentials: true,
+  });
+  
+  const { courseId } = useParams();
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await request.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
 
-import axios from "axios"
-
-const Courses = ({ courses }) => {
-	const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`
-
-	const { courseId } = useParams()
-
-	const [course, setCourse] = useState({})
-	const findCourseById = async (courseId) => {
-		const response = await axios.get(`${URL}/${courseId}`)
-		setCourse(response.data)
-	}
-	useEffect(() => {
-		findCourseById(courseId)
-	}, [courseId])
-
-	const { name, number, startDate, endDate } = course
-
-	const { pathname } = useLocation()
-
-	return (
-		<div className='scrollable'>
-			<div className='pos-f-t mobile-nav'>
-				<div className='collapse absolute' id='navbarToggleExternalContent'>
-					<div className='bg-dark p-4'>
-						<h4 className='text-white'>Collapsed content</h4>
-						<span className='text-muted'>Toggleable via the navbar brand.</span>
-					</div>
-				</div>
-				<nav className='navbar navbar-dark bg-dark d-md-none p-0 m-0'>
-					<a href='mobile-nav.html'>
-						<button
-							className='navbar-toggler'
-							type='button'
-							data-toggle='collapse'
-							data-target='#navbarToggleExternalContent'
-							aria-controls='navbarToggleExternalContent'
-							aria-expanded='false'
-							aria-label='Toggle navigation'>
-							<span className='navbar-toggler-icon'></span>
-						</button>
-					</a>
-				</nav>
-			</div>
-			<div className='main-page'>
-				<div className='container-fluid'>
-					<div className='row account-header'>
-						<div className='col col-sm-1 mt-1 mb-1'>
-							<i className='fa-solid fa-bars custom-hamburger'></i>
-						</div>
-						<div className='col col-sm-11 custom-breadcrumb m-0'>
-							<nav aria-label='breadcrumb m-0'>
-								<ol className='breadcrumb mt-1 mb-1'>
-									<li className='breadcrumb-item red'>
-										<Link href='#'>
-											<p className='red m-0'>{number + " " + name}</p>
-										</Link>
-									</li>
-									<li className='breadcrumb-item active' aria-current='page'>
-										{pathname.split("/")[pathname.split("/").length - 1]}
-									</li>
-								</ol>
-							</nav>
-						</div>
-					</div>
-					<div className='row account-header-divider'>
-						<hr className='custom-divider' />
-					</div>
-
-					<div className='row'>
-						<div className='col d-none d-lg-block col-md-2'>
-							<CourseNavigation number={number} />
-						</div>
-						<div className='col-12 col-md-10 container-fluid'>
-							{/* Home screen comes here  */}
-
-							<Routes>
-								<Route path='/' element={<Navigate to='Home' />} />
-								<Route path='Home' element={<Home />} />
-								<Route path='Modules' element={<Modules />} />
-								<Route path='Assignments' element={<Assignments />} />
-								<Route
-									path='Assignments/:assignmentId'
-									element={<AssignmentEditor />}
-								/>
-								<Route path='Grades' element={<Grades />} />
-							</Routes>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
+  return (
+    <div>
+      <CourseHeader course={course} />
+      <CourseNavigation />
+      <div>
+        <div
+          className="overflow-y-scroll position-fixed bottom-0 end-0"
+          style={{
+            left: "320px",
+            top: "70px",
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Navigate to="Home" />} />
+            <Route path="Home" element={<Home />} />
+            <Route path="Modules" element={<Modules />} />
+            <Route
+              path="Piazza"
+              element={
+                <div className="mt-4">
+                  <h2>Piazza</h2>
+                </div>
+              }
+            />
+            <Route
+              path="ZoomMeetings"
+              element={
+                <div className="mt-4">
+                  <h2>Zoom Meetings</h2>
+                </div>
+              }
+            />
+            <Route path="Assignments" element={<Assignments />} />
+            <Route
+              path="Assignments/:assignmentId"
+              element={<AssignmentEditor />}
+            />
+            <Route
+              path="Quizzes"
+              element={
+                <div className="mt-4">
+                  <h2>Quizzes</h2>
+                </div>
+              }
+            />
+            <Route path="Grades" element={<Grades />} />
+            <Route
+              path="People"
+              element={
+                <div className="mt-4">
+                  <h2>People</h2>
+                </div>
+              }
+            />
+            <Route
+              path="PanoptoVideo"
+              element={
+                <div className="mt-4">
+                  <h2>Panopto Video</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Discussions"
+              element={
+                <div className="mt-4">
+                  <h2>Discussions</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Announcements"
+              element={
+                <div className="mt-4">
+                  <h2>Announcements</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Pages"
+              element={
+                <div className="mt-4">
+                  <h2>Pages</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Files"
+              element={
+                <div className="mt-4">
+                  <h2>Files</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Rubrics"
+              element={
+                <div className="mt-4">
+                  <h2>Rubrics</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Outcomes"
+              element={
+                <div className="mt-4">
+                  <h2>Outcomes</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Collobarations"
+              element={
+                <div className="mt-4">
+                  <h2>Collobarations</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Syllabus"
+              element={
+                <div className="mt-4">
+                  <h2>Syllabus</h2>
+                </div>
+              }
+            />
+            <Route
+              path="Settings"
+              element={
+                <div className="mt-4">
+                  <h2>Settings</h2>
+                </div>
+              }
+            />
+          </Routes>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default Courses
+export default Courses;

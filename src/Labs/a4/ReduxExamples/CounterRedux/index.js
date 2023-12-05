@@ -1,18 +1,15 @@
-/** @format */
-
-import { useSelector, useDispatch } from "react-redux"
-import { increment, decrement } from "./CounterReducer"
-
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "./counterReducer";
 function CounterRedux() {
-	const { count } = useSelector((state) => state.counterReducer)
-	const dispatch = useDispatch()
-	return (
-		<div>
-			<h2>Counter Redux</h2>
-			<h3>{count}</h3>
-			<button onClick={() => dispatch(increment())}>Increment </button>
-			<button onClick={() => dispatch(decrement())}>Decrement </button>
-		</div>
-	)
+  const { count } = useSelector((state) => state.counterReducer);
+  const dispatch = useDispatch();
+  return (
+    <div>
+      <h2>Counter Redux</h2>
+      <h3>{count}</h3>
+      <button onClick={() => dispatch(increment())}>Increment </button>
+      <button onClick={() => dispatch(decrement())}>Decrement </button>
+    </div>
+  );
 }
-export default CounterRedux
+export default CounterRedux;

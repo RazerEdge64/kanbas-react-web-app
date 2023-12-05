@@ -1,56 +1,27 @@
-.wd-kanbas-navigation .wd-icon {
-  font-size: 2em;
+.kanbas-nav-link {
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    color: white;
 }
 
-.wd-kanbas-navigation .list-group-item:first-child,
-.wd-kanbas-navigation .list-group-item:last-child,
-.wd-kanbas-navigation .list-group-item.active:last-child,
-.wd-kanbas-navigation.list-group {
-  border-radius: 0px;
+.kanbas-nav-sidebar {
+    width: 85px;
+    height: 100vh;
 }
 
-.wd-kanbas-navigation {
-  background-color: black;
-  list-style: none;
-  padding: 0px;
-  width: 80px;
-  margin: 0px 15px 0px 0px;
+.kanbas-nav-icon {
+    color: red;
+    font-size: 30px;
 }
 
-.wd-kanbas-navigation a {
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 0.8em;
-  text-align: center;
-  background-color: black;
-  border: none;
+.kanbas-nav-active {
+    background-color: white;
+    border-right: 1px solid black;
+    color: red;
 }
 
-.wd-kanbas-navigation a.active {
-  background-color: white;
-}
-.wd-kanbas-navigation a.active {
-  color: red;
-}
 
-.wd-kanbas-navigation a {
-  color: red;
-  text-decoration: none;
-}
-
-.wd-kanbas-navigation-text {
-  color: white;
-} 
-
-.wd-kanbas-navigation-text-active{
-  color: red;
-} 
-
-.sidebar {
-  width: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-bottom: -101%;
-  padding-bottom: 101%;
-}

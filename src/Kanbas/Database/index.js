@@ -1,17 +1,16 @@
-/** @format */
-
-import courses from "./courses.json"
-import modules from "./modules.json"
-import assignments from "./assignments.json"
+/* eslint-disable import/no-anonymous-default-export */
+import courses from "./courses.json";
+import modules from "./modules.json";
+import assignments from "./assignments.json";
+import enrollments from "./enrollments.json";
 import users from "./users.json"
-import enrollments from "./enrollments.json"
 import grades from "./grades.json"
 
 export default {
-	courses,
-	modules,
-	assignments,
-	users,
-	enrollments,
-	grades,
-}
+  courses,
+  modules,
+  assignments,
+  enrollments,
+  users,
+  grades,
+};
